@@ -1,36 +1,36 @@
 # Piep-Kubernetes
 ## Installation
 ### Kubernetes
-'cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf'
+cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 
-'overlay'
+overlay
 
-'br_netfilter'
+br_netfilter
 
-'EOF'
+EOF
 
-'sudo modprobe overlay'
+sudo modprobe overlay
 
-'sudo modprobe br_netfilter'
+sudo modprobe br_netfilter
 
 
 
 *# Setup required sysctl params, these persist across reboots.*
 
-'cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf'
+cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
 
-'net.bridge.bridge-nf-call-iptables  = 1'
+net.bridge.bridge-nf-call-iptables  = 1
 
-'net.ipv4.ip_forward                 = 1'
+net.ipv4.ip_forward                 = 1
 
-'net.bridge.bridge-nf-call-ip6tables = 1'
+net.bridge.bridge-nf-call-ip6tables = 1
 
-'EOF'
+EOF
 
 
 
 *# Apply sysctl params without reboot*
 
-'sudo sysctl --system'
+sudo sysctl --system
 
 ### MongoDB
