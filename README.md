@@ -171,7 +171,8 @@ RUN apt-get -y install npm
 RUN npm install --save express \
     && npm install --save qr-image \
     && npm install --save crypto \
-    && npm install --save avatar-builder
+    && npm install --save avatar-builder \
+    && npm install --save mongodb
 
 RUN apt-get install -y git
 
