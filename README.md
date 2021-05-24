@@ -1,6 +1,6 @@
 # Piep-Kubernetes
 ## Installation
-### Kubernetes
+### Kubernetes Setup
 #### containerd:
 ```
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
@@ -43,5 +43,18 @@ sudo nano /etc/containerd/config.toml
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
 ```
+```
+sudo systemctl restart containerd
+```
+
+### Installing kubeadm, kubelet and kubectl
+#### Debian-based distributions
+* # Update the apt package index and install packages needed to use the Kubernetes apt repository: *
+```
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+```
+
+
 
 ### MongoDB
