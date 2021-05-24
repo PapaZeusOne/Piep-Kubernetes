@@ -1,7 +1,9 @@
 # Piep-Kubernetes
 ## Installation
 ### Kubernetes
-#### containerd
+#### containerd:
+```
+
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 
 overlay
@@ -14,7 +16,7 @@ sudo modprobe overlay
 
 sudo modprobe br_netfilter
 
-
+```
 
 *# Setup required sysctl params, these persist across reboots.*
 
