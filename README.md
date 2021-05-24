@@ -186,7 +186,16 @@ CMD [ "node", "piep.js"]
 ```
 sudo docker build -t dockerfile . 
 ```
-*# Rename image to push it on DockerHub*
+#### Push on DockerHub
+*# Rename image*
 ```
 sudo docker image tag 406faaf8f8b4 papazeus42/piep:latest
+```
+*# log into DockerHub from terminal*
+```
+sudo docker login
+```
+*# Push to DockerHub
+```
+sudo docker push papazeus42/piep
 ```
