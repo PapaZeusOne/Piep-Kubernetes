@@ -88,6 +88,10 @@ kind : ClusterConfiguration
 networking :
   podSubnet : "192.168.0.0/16"
 ```
-  
+
+### Initialize Cluster
+```
+sudo kubeadm init -- config ./ config . yaml
+```
 
 
