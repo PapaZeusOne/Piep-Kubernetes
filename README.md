@@ -34,7 +34,7 @@ sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 sudo systemctl restart containerd
 ```
-#### Use systemd for cgroup driver in /etc/containerd/config.toml
+#### Use *systemd* for cgroup driver in /etc/containerd/config.toml
 ```
 sudo nano /etc/containerd/config.toml
 
