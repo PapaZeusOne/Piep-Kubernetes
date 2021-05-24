@@ -93,7 +93,7 @@ networking :
 
 ### Initialize Cluster
 ```
-sudo kubeadm init -- config ./ config . yaml
+sudo kubeadm init --config ./config.yaml
 ```
 
 ### *Only for Worker*
