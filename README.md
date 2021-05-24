@@ -1,6 +1,7 @@
 # Piep-Kubernetes
 ## Installation
 ### Kubernetes
+#### containerd
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 
 overlay
@@ -33,4 +34,12 @@ EOF
 
 sudo sysctl --system
 
+#### Install containerd
+sudo systemctl restart containerd
+
+sudo mkdir -p /etc/containerd
+
+containerd config default | sudo tee /etc/containerd/config.toml
+
+sudo systemctl restart containerd
 ### MongoDB
