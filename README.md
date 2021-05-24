@@ -49,7 +49,7 @@ sudo systemctl restart containerd
 
 ### Installing kubeadm, kubelet and kubectl
 #### Debian-based distributions
-*# Update the apt package index and install packages needed to use the Kubernetes apt repository: *
+*# Update the apt package index and install packages needed to use the Kubernetes apt repository:*
 ```
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
