@@ -152,3 +152,7 @@ sudo systemctl status docker
 ```
 sudo docker pull ubuntu
 ```
+*# View all images:*
+```
+sudo docker images
+```
