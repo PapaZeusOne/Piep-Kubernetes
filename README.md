@@ -148,3 +148,7 @@ sudo apt install docker-ce
 sudo systemctl status docker
 ```
 #### Docker Images
+*# Execute the following command to download the official ubuntu image to your computer:*
+```
+sudo docker pull ubuntu
+```
