@@ -3,6 +3,9 @@
 ### Kubernetes Setup
 #### containerd:
 ```
+sudo apt install containerd  
+```
+```
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 > overlay
 > br_netfilter
@@ -29,7 +32,6 @@ sudo sysctl --system
 ```
 #### Install containerd
 ```
-sudo apt install containerd  
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 sudo systemctl restart containerd
