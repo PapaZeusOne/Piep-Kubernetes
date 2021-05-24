@@ -156,3 +156,29 @@ sudo docker pull ubuntu
 ```
 sudo docker images
 ```
+*# Create dockerfile*
+```
+sudo nano dockerfile
+```
+```
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt-get -y install curl
+RUN apt-get -y install nodejs
+RUN apt-get -y install npm
+
+RUN npm install --save express \
+    && npm install --save qr-image \
+    && npm install --save crypto \
+    && npm install --save avatar-builder
+
+RUN apt-get install -y git
+
+RUN git clone https://gitlab.com/ralfluebben/piep
+
+WORKDIR /piepDir
+
+CMD [ "node", "piep.js"]
+```
+*# Build image from dockerfile
