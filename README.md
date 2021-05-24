@@ -181,4 +181,11 @@ WORKDIR /piepDir
 
 CMD [ "node", "piep.js"]
 ```
-*# Build image from dockerfile
+*# Build image from dockerfile*
+```
+sudo docker build -t dockerfile . 
+```
+*# Rename image to push it on DockerHub*
+```
+sudo docker image tag 406faaf8f8b4 papazeus42/piep:latest
+```
