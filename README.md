@@ -72,3 +72,22 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
+### Setup Configuration File
+#### Create configuration file *config.yaml*
+
+```
+sudo nano config.yaml
+```
+```
+apiVersion : kubelet.config.k8s.io/v1beta1
+kind : KubeletConfiguration
+cgroupDriver : systemd
+---
+apiVersion : kubeadm.k8s.io/v1beta2
+kind : ClusterConfiguration
+networking :
+  podSubnet : "192.168.0.0/16"
+```
+  
+
+
