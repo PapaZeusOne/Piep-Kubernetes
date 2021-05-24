@@ -117,8 +117,10 @@ kubectl apply -f calico.yaml
 ```
 
 ### Docker
-*1st step: Cline git project*
-
+*Clone Piep*
+```
+git clone https://gitlab.com/ralfluebben/piep/
+```
 *# Step 1 - Installing Docker*
 ```
 sudo apt update
