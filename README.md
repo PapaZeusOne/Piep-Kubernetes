@@ -178,7 +178,7 @@ RUN apt-get install -y git
 
 RUN git clone https://gitlab.com/ralfluebben/piep
 
-WORKDIR /piepDir
+WORKDIR /piep
 
 CMD [ "node", "piep.js"]
 ```
