@@ -116,6 +116,75 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl apply -f calico.yaml
 ```
 
+### Kubernetes Metrics Server
+*# Install Metrics Server*
+```
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
+*# Change deployment file*
+```
+kubectl -n kube-system edit deploy metrics-server
+```
+Press *I* inside Vi file to edit it. If done, press *ESC*. 
+Don't close the file! Press *:" and type *wq*
+
+*# Add following command under imagePullPolicy*
+```
+command:
+- /metrics-server
+- --kubelet-insecure-tls
+```
+
+### Horizonal Pod Autoscaler
+*# Create following .yaml*
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: piep-redis-deployment
+spec:
+  selector:
+    matchLabels:
+      app: piep-redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: piep-redis
+    spec:
+      containers:
+      - name: piep-redis
+        image: ralfluebben/piep-redis:1.27
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 200m
+        env:
+        - name: db_addr
+          value: "g2-mongo.wi.fh-flensburg.de"
+```
+```
+kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+```
+*# Create HPA*
+```
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+```
+
+*# Check current status of autoscaler:*
+```
+kubectl get hpa
+```
+
+*# Delete HPA*
+```
+kubectl delete hpa piep-redis-deployment
+```
+
+
 ### Docker
 *Clone Piep*
 ```
@@ -198,10 +267,4 @@ sudo docker login
 *# Push to DockerHub
 ```
 sudo docker push papazeus42/piep
-```
-
-### Kubernetes Metrics Server
-*# Install Metrics Server*
-```
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
