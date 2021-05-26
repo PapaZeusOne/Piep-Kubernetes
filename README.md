@@ -199,3 +199,9 @@ sudo docker login
 ```
 sudo docker push papazeus42/piep
 ```
+
+### Kubernetes Metrics Server
+*# Install Metrics Server*
+```
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
