@@ -167,7 +167,7 @@ spec:
           value: "g2-mongo.wi.fh-flensburg.de"
 ```
 ```
-kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+kubectl apply -f piep-redis-deployment.yaml
 ```
 *# Create HPA*
 ```
