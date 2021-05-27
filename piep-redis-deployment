@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: piep-redis-deployment
+spec:
+  selector:
+    matchLabels:
+      app: piep-redis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: piep-redis
+    spec:
+      containers:
+      - name: piep-redis
+        image: ralfluebben/piep-redis:1.27
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 200m
+        env:
+        - name: db_addr
+          value: "g2-mongo.wi.fh-flensburg.de"
