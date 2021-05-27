@@ -206,7 +206,7 @@ kubectl delete hpa piep-redis-deployment
 ```
 
 
-### Docker
+### Docker Installation
 *Clone Piep*
 ```
 git clone https://gitlab.com/ralfluebben/piep/
