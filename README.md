@@ -125,7 +125,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 ```
 kubectl -n kube-system edit deploy metrics-server
 ```
-Press *I* inside Vi file to edit it. If done, press *ESC*. 
+Press *i* inside Vi file to edit it. If done, press *ESC*. 
 Don't close the file! Press *:" and type *wq*
 
 *# Add following command under imagePullPolicy*
