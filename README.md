@@ -195,14 +195,26 @@ kubectl apply -f piep-redis-deployment.yaml
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 ```
 
+*# Delete HPA*
+```
+kubectl delete hpa piep-redis-deployment
+```
+
+## Commands to testing
+### On master
+
 *# Check current status of autoscaler:*
 ```
 kubectl get hpa
 ```
 
-*# Delete HPA*
+*# View all pods*
 ```
-kubectl delete hpa piep-redis-deployment
+kubectl -n kube-system get pods
+```
+*# View nodes*
+```
+kubectl top nodes
 ```
 
 
