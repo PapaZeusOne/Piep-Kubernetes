@@ -212,7 +212,7 @@ kubectl get hpa
 ```
 kubectl -n kube-system get pods
 ```
-*# View nodes*
+*# View nodes in cluster*
 ```
 kubectl top nodes
 ```
