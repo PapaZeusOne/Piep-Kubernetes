@@ -216,6 +216,10 @@ kubectl -n kube-system get pods
 ```
 kubectl top nodes
 ```
+*# View HPA and all dependencies*
+```
+kubectl describe hpa piep-redis-deployment
+```
 
 
 ### Docker Installation
