@@ -185,14 +185,14 @@ spec:
             cpu: 200m
         env:
         - name: db_addr
-          value: "g2-mongo.wi.fh-flensburg.de"
+          value: "g2-mongos-ms.wi.fh-flensburg.de"
 ```
 ```
 kubectl apply -f piep-redis-deployment.yaml
 ```
 *# Create HPA*
 ```
-kubectl autoscale deployment piep-redis-deployment --cpu-percent=50 --min=1 --max=10
+kubectl autoscale deployment piep-redis-deployment --cpu-percent=20 --min=1 --max=10
 ```
 
 *# Delete HPA*
