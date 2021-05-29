@@ -192,7 +192,7 @@ kubectl apply -f piep-redis-deployment.yaml
 ```
 *# Create HPA*
 ```
-kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+kubectl autoscale deployment piep-redis-deployment --cpu-percent=50 --min=1 --max=10
 ```
 
 *# Delete HPA*
