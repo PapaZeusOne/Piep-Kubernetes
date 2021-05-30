@@ -217,9 +217,9 @@ kubectl get hpa
 kubectl get deployment piep-redis-deployment
 ```
 
-*# View all pods*
+*# Show all pods with hidden information, like IP Adress to show, that each pod has an unique IP address*
 ```
-kubectl -n kube-system get pods
+kubectl get pods --output=wide 
 ```
 *# View nodes in cluster*
 ```
@@ -240,7 +240,7 @@ curl -d "{\"username\":\"adrian\",\"msg\":\"hallo\"}" -H "Content-type:applicati
 curl "http://g2-master.wi.fh-flensburg.de:30007/follow?me=adrian&follow=daniel"
 ```
 
-### Docker Installation
+## Docker Installation
 *Clone Piep*
 ```
 git clone https://gitlab.com/ralfluebben/piep/
