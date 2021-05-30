@@ -232,7 +232,7 @@ kubectl describe hpa piep-redis-deployment
 ### Curl Commands
 *# Piep*
 ```
-curl -d "{\"username\":\"adrian\",\"msg\":\"hallo\"}" -H "Content-type:application/json" -X POST http://g2-master.wi.fh-flensburg.de/piep
+curl -d "{\"username\":\"adrian\",\"msg\":\"hallo\"}" -H "Content-type:application/json" -X POST http://g2-master.wi.fh-flensburg.de:30007/piep
 ```
 
 *# Follow*
