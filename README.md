@@ -224,7 +224,16 @@ kubectl top nodes
 ```
 kubectl describe hpa piep-redis-deployment
 ```
+### Curl Commands
+*# Piep*
+```
+curl -d "{\"username\":\"adrian\",\"msg\":\"hallo\"}" -H "Content-type:application/json" -X POST http://g2-master.wi.fh-flensburg.de/piep
+```
 
+*# Follow*
+```
+curl "http://g2-master.wi.fh-flensburg.de:30007/follow?me=adrian&follow=daniel"
+```
 
 ### Docker Installation
 *Clone Piep*
