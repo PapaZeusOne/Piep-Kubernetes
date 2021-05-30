@@ -207,6 +207,10 @@ kubectl delete hpa piep-redis-deployment
 ```
 kubectl get hpa
 ```
+*# View resized replicas during consumption*
+```
+kubectl get deployment piep-redis-deployment
+```
 
 *# View all pods*
 ```
