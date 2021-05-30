@@ -197,7 +197,7 @@ kubectl apply -f piep-redis-deployment.yaml
 ```
 *# Create HPA*
 ```
-kubectl autoscale deployment piep-redis-deployment --cpu-percent=20 --min=1 --max=10
+kubectl autoscale deployment piep-redis-deployment --cpu-percent=20 --min=1 --max=30
 ```
 
 *# Delete HPA*
