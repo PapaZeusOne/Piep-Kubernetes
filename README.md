@@ -240,6 +240,16 @@ curl -d "{\"username\":\"adrian\",\"msg\":\"hallo\"}" -H "Content-type:applicati
 curl "http://g2-master.wi.fh-flensburg.de:30007/follow?me=adrian&follow=daniel"
 ```
 
+*# Users
+```
+curl http://g2-master.wi.fh-flensburg.de:30007/users
+```
+
+*# Feed Me*
+```
+curl "http://g2-master.wi.fh-flensburg.de:30007/feedme/adrian
+```
+
 ## Docker Installation
 *Clone Piep*
 ```
