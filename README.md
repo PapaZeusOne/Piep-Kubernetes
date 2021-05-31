@@ -196,8 +196,9 @@ spec:
 kubectl apply -f piep-redis-deployment.yaml
 ```
 *# Create HPA*
+Use only 75% of CPU Utilitation. With 10 worker I have 15 CPUs available. 
 ```
-kubectl autoscale deployment piep-redis-deployment --cpu-percent=50 --min=1 --max=40
+kubectl autoscale deployment piep-redis-deployment --cpu-percent=50 --min=1 --max=60
 ```
 
 *# Delete HPA*
