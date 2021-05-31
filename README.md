@@ -227,7 +227,7 @@ kubectl top nodes
 ```
 *# View HPA and all dependencies*
 ```
-kubectl describe hpa piep-redis-deployment
+kubectl describe hpa
 ```
 ### Curl Commands
 *# Piep*
