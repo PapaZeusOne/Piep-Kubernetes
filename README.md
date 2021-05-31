@@ -74,6 +74,11 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
+### *Only for Worker*
+```
+kubeadm join 172.23.1.116:6443 --token ebc733.7ysxvxlfgw3qxpjl \ --discovery-token-ca-cert-hash sha256:70630a919eecc923790b2310a3448c07155a9efa6990a1873a96fdd4ced7c98c
+```
+
 ### Setup Configuration File
 #### Create configuration file *config.yaml*
 
@@ -120,11 +125,6 @@ kubectl apply -f piep-redis-service.yaml
 ### *Get token if not avl.*
 ```
 kubeadm token create --print-join-command
-```
-
-### *Only for Worker*
-```
-kubeadm join 172.23.1.116:6443 --token ebc733.7ysxvxlfgw3qxpjl \ --discovery-token-ca-cert-hash sha256:70630a919eecc923790b2310a3448c07155a9efa6990a1873a96fdd4ced7c98c
 ```
 
 ### Install Calico with Kubernetes API: *50 nodes or less*
