@@ -185,9 +185,9 @@ spec:
         - containerPort: 3000
         resources:
           limits:
-            cpu: 1000m
+            cpu: 500m
           requests:
-            cpu: 200m
+            cpu: 100m
         env:
         - name: db_addr
           value: "g2-mongos-ms.wi.fh-flensburg.de"
